@@ -196,6 +196,15 @@
         justify-content: center;
       }
 
+      .footer {
+        margin-top: 40px;
+        padding: 10px;
+        background: var(--azul);
+        color: white;
+        border-radius: var(--borde-redondeado);
+        font-weight: 400;
+    }
+
       button {
         flex: none;
         width: 48%;
@@ -203,3 +212,5 @@
         font-size: 0.9rem;
       }
     }
+
+    
