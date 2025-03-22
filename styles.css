@@ -1,0 +1,205 @@
+    :root {
+      --verde: #28a745;
+      --rojo: #dc3545;
+      --gris-claro: #f8f9fa;
+      --sombra: 0 2px 8px rgba(0,0,0,0.1);
+      --radio-borde: 8px;
+      --transicion-rapida: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fefefe;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .contadores {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: white;
+      border-radius: var(--radio-borde);
+      box-shadow: var(--sombra);
+      z-index: 1000;
+      max-width: 350px;
+      transition: var(--transicion-rapida);
+    }
+
+    .contador-item {
+      text-align: center;
+      min-width: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .contador-item h3 {
+      margin: 0 0 0.3rem 0;
+      font-size: 0.95rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .contador-item p {
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    #lista-estudiantes {
+      margin-top: 140px;
+    }
+
+    .estudiante {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: white;
+      border-radius: var(--radio-borde);
+      box-shadow: var(--sombra);
+      transition: var(--transicion-rapida);
+      gap: 1rem;
+    }
+
+    .estudiante:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .status {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin-right: 1rem;
+      transition: var(--transicion-rapida);
+    }
+
+    .nombre {
+      flex: 1;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    .botones-accion {
+      display: flex;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: var(--transicion-rapida);
+    }
+
+    .presente-btn {
+      background-color: var(--verde);
+      color: white;
+    }
+
+    .presente-btn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+
+    .ausente-btn {
+      background-color: var(--rojo);
+      color: white;
+    }
+
+    .ausente-btn:hover {
+      background-color: #c82333;
+      transform: scale(1.05);
+    }
+
+    .presente {
+      background-color: var(--verde) !important;
+      box-shadow: 0 0 8px rgba(40,167,69,0.3);
+    }
+
+    .ausente {
+      background-color: var(--rojo) !important;
+      box-shadow: 0 0 8px rgba(220,53,69,0.3);
+    }
+
+    .reset-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: var(--transicion-rapida);
+      margin: 20px auto 0;
+      display: block;
+    }
+
+    .reset-btn:hover {
+      background-color: #0069d9;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .contadores {
+        top: 10px;
+        padding: 0.8rem 1rem;
+        gap: 1rem;
+        max-width: 300px;
+      }
+
+      .contador-item {
+        min-width: 80px;
+      }
+
+      .contador-item h3 {
+        font-size: 0.85rem;
+      }
+
+      .contador-item p {
+        font-size: 1.4rem;
+      }
+
+      .estudiante {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .nombre {
+        flex: 0 0 100%;
+        margin: 0;
+      }
+
+      .botones-accion {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+      }
+
+      button {
+        flex: none;
+        width: 48%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
